@@ -19,7 +19,7 @@
                    Width="auto" FontSize="20" ></TextBlock>
         <StackPanel HorizontalAlignment="Center"
                     VerticalAlignment="Center" Grid.Row="1">
-            <Button Content="{x:Static props:Resources.TextPageOne}"></Button>
+            <Button Content="{x:Static props:Resources.TextPageOne}" Click="Button_Click"></Button>
             <Button Content="{x:Static props:Resources.TextPageTwo}"></Button>
             <Button Content="{x:Static props:Resources.TextPageThree}"></Button>
             <Button Content="{x:Static props:Resources.TextPageFour}"></Button>

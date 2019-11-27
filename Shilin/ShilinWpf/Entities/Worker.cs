@@ -20,10 +20,10 @@ namespace ShilinWpf.Entities
             this.Project = new HashSet<Project>();
         }
     
-        public string WorkerID { get; set; }
+        public int WorkerID { get; set; }
         public string Surname { get; set; }
         public string Name { get; set; }
-        public string State { get; set; }
+        public string Function { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
     

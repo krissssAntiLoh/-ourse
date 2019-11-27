@@ -9,14 +9,14 @@
           <Key>
             <PropertyRef Name="AssetsID" />
           </Key>
-          <Property Name="AssetsID" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="Additional" Type="nvarchar(max)" Nullable="false" />
+          <Property Name="AssetsID" Type="int" Nullable="false" />
+          <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
         </EntityType>
         <EntityType Name="Client">
           <Key>
             <PropertyRef Name="ClientID" />
           </Key>
-          <Property Name="ClientID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ClientID" Type="int" Nullable="false" />
           <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Phone" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -26,12 +26,14 @@
           <Key>
             <PropertyRef Name="ProjectID" />
           </Key>
-          <Property Name="ProjectID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProjectID" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="ClientsID" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="WorkerID" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="AssetsID" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="TypeServiceID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ClientsID" Type="int" Nullable="false" />
+          <Property Name="WorkerID" Type="int" Nullable="false" />
+          <Property Name="AssetsID" Type="int" Nullable="false" />
+          <Property Name="TypeServiceID" Type="int" Nullable="false" />
+          <Property Name="DateAdd" Type="date" />
+          <Property Name="DateEnd" Type="date" />
         </EntityType>
         <EntityType Name="sysdiagrams">
           <Key>
@@ -47,18 +49,17 @@
           <Key>
             <PropertyRef Name="TypeServiceID" />
           </Key>
-          <Property Name="TypeServiceID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="TypeServiceID" Type="int" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="CodeType" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
         <EntityType Name="Worker">
           <Key>
             <PropertyRef Name="WorkerID" />
           </Key>
-          <Property Name="WorkerID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="WorkerID" Type="int" Nullable="false" />
           <Property Name="Surname" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="State" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Function" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Login" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="Password" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
@@ -166,15 +167,15 @@
           <Key>
             <PropertyRef Name="AssetsID" />
           </Key>
-          <Property Name="AssetsID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="Additional" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="AssetsID" Type="Int32" Nullable="false" />
+          <Property Name="Name" Type="String" Nullable="false" MaxLength="Max" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Project" Relationship="ShilinSupportModel.FK_Project_Assets" FromRole="Assets" ToRole="Project" />
         </EntityType>
         <EntityType Name="Client">
           <Key>
             <PropertyRef Name="ClientID" />
           </Key>
-          <Property Name="ClientID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ClientID" Type="Int32" Nullable="false" />
           <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Phone" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
@@ -185,12 +186,14 @@
           <Key>
             <PropertyRef Name="ProjectID" />
           </Key>
-          <Property Name="ProjectID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ProjectID" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="ClientsID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="WorkerID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="AssetsID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="TypeServiceID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="ClientsID" Type="Int32" Nullable="false" />
+          <Property Name="WorkerID" Type="Int32" Nullable="false" />
+          <Property Name="AssetsID" Type="Int32" Nullable="false" />
+          <Property Name="TypeServiceID" Type="Int32" Nullable="false" />
+          <Property Name="DateAdd" Type="DateTime" Precision="0" />
+          <Property Name="DateEnd" Type="DateTime" Precision="0" />
           <NavigationProperty Name="Assets" Relationship="ShilinSupportModel.FK_Project_Assets" FromRole="Project" ToRole="Assets" />
           <NavigationProperty Name="Client" Relationship="ShilinSupportModel.FK_Project_Client" FromRole="Project" ToRole="Client" />
           <NavigationProperty Name="TypeService" Relationship="ShilinSupportModel.FK_Project_TypeService" FromRole="Project" ToRole="TypeService" />
@@ -210,19 +213,18 @@
           <Key>
             <PropertyRef Name="TypeServiceID" />
           </Key>
-          <Property Name="TypeServiceID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="TypeServiceID" Type="Int32" Nullable="false" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="CodeType" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Project" Relationship="ShilinSupportModel.FK_Project_TypeService" FromRole="TypeService" ToRole="Project" />
         </EntityType>
         <EntityType Name="Worker">
           <Key>
             <PropertyRef Name="WorkerID" />
           </Key>
-          <Property Name="WorkerID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="WorkerID" Type="Int32" Nullable="false" />
           <Property Name="Surname" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-          <Property Name="State" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Function" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Login" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <Property Name="Password" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
           <NavigationProperty Name="Project" Relationship="ShilinSupportModel.FK_Project_Worker" FromRole="Worker" ToRole="Project" />
@@ -275,7 +277,7 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-      </Schema>
+        </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
     <edmx:Mappings>
@@ -284,7 +286,7 @@
           <EntitySetMapping Name="Assets">
             <EntityTypeMapping TypeName="ShilinSupportModel.Assets">
               <MappingFragment StoreEntitySet="Assets">
-                <ScalarProperty Name="Additional" ColumnName="Additional" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="AssetsID" ColumnName="AssetsID" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -303,6 +305,8 @@
           <EntitySetMapping Name="Project">
             <EntityTypeMapping TypeName="ShilinSupportModel.Project">
               <MappingFragment StoreEntitySet="Project">
+                <ScalarProperty Name="DateEnd" ColumnName="DateEnd" />
+                <ScalarProperty Name="DateAdd" ColumnName="DateAdd" />
                 <ScalarProperty Name="TypeServiceID" ColumnName="TypeServiceID" />
                 <ScalarProperty Name="AssetsID" ColumnName="AssetsID" />
                 <ScalarProperty Name="WorkerID" ColumnName="WorkerID" />
@@ -326,7 +330,6 @@
           <EntitySetMapping Name="TypeService">
             <EntityTypeMapping TypeName="ShilinSupportModel.TypeService">
               <MappingFragment StoreEntitySet="TypeService">
-                <ScalarProperty Name="CodeType" ColumnName="CodeType" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="TypeServiceID" ColumnName="TypeServiceID" />
               </MappingFragment>
@@ -337,7 +340,7 @@
               <MappingFragment StoreEntitySet="Worker">
                 <ScalarProperty Name="Password" ColumnName="Password" />
                 <ScalarProperty Name="Login" ColumnName="Login" />
-                <ScalarProperty Name="State" ColumnName="State" />
+                <ScalarProperty Name="Function" ColumnName="Function" />
                 <ScalarProperty Name="Name" ColumnName="Name" />
                 <ScalarProperty Name="Surname" ColumnName="Surname" />
                 <ScalarProperty Name="WorkerID" ColumnName="WorkerID" />

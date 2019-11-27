@@ -117,6 +117,12 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Add" xml:space="preserve">
+    <value>Добавить</value>
+  </data>
+  <data name="AllText" xml:space="preserve">
+    <value>Все объекты</value>
+  </data>
   <data name="ButtonApply" xml:space="preserve">
     <value>Применить</value>
   </data>
@@ -126,11 +132,32 @@
   <data name="ButtonRefresh" xml:space="preserve">
     <value>Обновить</value>
   </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Отменить</value>
+  </data>
   <data name="CaptionError" xml:space="preserve">
     <value>Ошибка!</value>
   </data>
   <data name="CaptionQuestion" xml:space="preserve">
     <value>Уверены?</value>
+  </data>
+  <data name="EmailTB" xml:space="preserve">
+    <value>Почта</value>
+  </data>
+  <data name="FunctionTB" xml:space="preserve">
+    <value>Должность</value>
+  </data>
+  <data name="IdAssetsTB" xml:space="preserve">
+    <value>Id прогресса</value>
+  </data>
+  <data name="IdClientTB" xml:space="preserve">
+    <value>Id клиента</value>
+  </data>
+  <data name="IdTypeServiceTB" xml:space="preserve">
+    <value>Id проблемы</value>
+  </data>
+  <data name="IdWorkerTB" xml:space="preserve">
+    <value>Id работника</value>
   </data>
   <data name="MessageCapcha" xml:space="preserve">
     <value>Введённый текст не соответствует капче!</value>
@@ -141,11 +168,35 @@
   <data name="MessageLoginFailed" xml:space="preserve">
     <value>Логин или пароль введен не верно!</value>
   </data>
+  <data name="NameNoHum" xml:space="preserve">
+    <value>Наименование</value>
+  </data>
+  <data name="NameTB" xml:space="preserve">
+    <value>Имя</value>
+  </data>
+  <data name="PhoneTB" xml:space="preserve">
+    <value>Телефон</value>
+  </data>
+  <data name="SurnameTB" xml:space="preserve">
+    <value>Фамилия</value>
+  </data>
+  <data name="TextAdd" xml:space="preserve">
+    <value>Добавить данные</value>
+  </data>
   <data name="TextAuth" xml:space="preserve">
     <value>Войти</value>
   </data>
   <data name="TextChooseLanguage" xml:space="preserve">
     <value>Выберите язык:</value>
+  </data>
+  <data name="TextDelete" xml:space="preserve">
+    <value>Удалить данные </value>
+  </data>
+  <data name="TextFilter" xml:space="preserve">
+    <value>Фильтр</value>
+  </data>
+  <data name="TextGrid" xml:space="preserve">
+    <value>Нет данных</value>
   </data>
   <data name="TextHello" xml:space="preserve">
     <value>Привет!</value>
@@ -154,19 +205,22 @@
     <value>Логин</value>
   </data>
   <data name="TextPageFour" xml:space="preserve">
-    <value>Страница 4</value>
+    <value>Секретная страница</value>
   </data>
   <data name="TextPageOne" xml:space="preserve">
-    <value>Страница 1</value>
+    <value>Добавить клиента</value>
   </data>
   <data name="TextPageThree" xml:space="preserve">
-    <value>Страница 3</value>
+    <value>Добавить работника</value>
   </data>
   <data name="TextPageTwo" xml:space="preserve">
-    <value>Страница 2</value>
+    <value>Добавить проект</value>
   </data>
   <data name="TextPassword" xml:space="preserve">
     <value>Пароль</value>
+  </data>
+  <data name="TextSearch" xml:space="preserve">
+    <value>Поиск </value>
   </data>
   <data name="TextSupportCenter" xml:space="preserve">
     <value>Центр поддержки</value>

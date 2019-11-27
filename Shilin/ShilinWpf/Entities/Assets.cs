@@ -20,8 +20,8 @@ namespace ShilinWpf.Entities
             this.Project = new HashSet<Project>();
         }
     
-        public string AssetsID { get; set; }
-        public string Additional { get; set; }
+        public int AssetsID { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Project> Project { get; set; }

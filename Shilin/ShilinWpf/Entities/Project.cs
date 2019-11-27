@@ -14,12 +14,14 @@ namespace ShilinWpf.Entities
     
     public partial class Project
     {
-        public string ProjectID { get; set; }
+        public int ProjectID { get; set; }
         public string Name { get; set; }
-        public string ClientsID { get; set; }
-        public string WorkerID { get; set; }
-        public string AssetsID { get; set; }
-        public string TypeServiceID { get; set; }
+        public int ClientsID { get; set; }
+        public int WorkerID { get; set; }
+        public int AssetsID { get; set; }
+        public int TypeServiceID { get; set; }
+        public Nullable<System.DateTime> DateAdd { get; set; }
+        public Nullable<System.DateTime> DateEnd { get; set; }
     
         public virtual Assets Assets { get; set; }
         public virtual Client Client { get; set; }

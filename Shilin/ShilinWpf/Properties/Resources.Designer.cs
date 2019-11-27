@@ -61,6 +61,24 @@ namespace ShilinWpf.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Add.
+        /// </summary>
+        public static string Add {
+            get {
+                return ResourceManager.GetString("Add", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на All entries.
+        /// </summary>
+        public static string AllText {
+            get {
+                return ResourceManager.GetString("AllText", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Apply.
         /// </summary>
         public static string ButtonApply {
@@ -88,6 +106,15 @@ namespace ShilinWpf.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Cancel.
+        /// </summary>
+        public static string Cancel {
+            get {
+                return ResourceManager.GetString("Cancel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Error!.
         /// </summary>
         public static string CaptionError {
@@ -102,6 +129,78 @@ namespace ShilinWpf.Properties {
         public static string CaptionQuestion {
             get {
                 return ResourceManager.GetString("CaptionQuestion", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Date added.
+        /// </summary>
+        public static string DateAdd {
+            get {
+                return ResourceManager.GetString("DateAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Date close.
+        /// </summary>
+        public static string DateEnd {
+            get {
+                return ResourceManager.GetString("DateEnd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Email.
+        /// </summary>
+        public static string EmailTB {
+            get {
+                return ResourceManager.GetString("EmailTB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Function.
+        /// </summary>
+        public static string FunctionTB {
+            get {
+                return ResourceManager.GetString("FunctionTB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id assets.
+        /// </summary>
+        public static string IdAssetsTB {
+            get {
+                return ResourceManager.GetString("IdAssetsTB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id client.
+        /// </summary>
+        public static string IdClientTB {
+            get {
+                return ResourceManager.GetString("IdClientTB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id type service.
+        /// </summary>
+        public static string IdTypeServiceTB {
+            get {
+                return ResourceManager.GetString("IdTypeServiceTB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id worker.
+        /// </summary>
+        public static string IdWorkerTB {
+            get {
+                return ResourceManager.GetString("IdWorkerTB", resourceCulture);
             }
         }
         
@@ -133,6 +232,51 @@ namespace ShilinWpf.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Title.
+        /// </summary>
+        public static string NameNoHum {
+            get {
+                return ResourceManager.GetString("NameNoHum", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Name.
+        /// </summary>
+        public static string NameTB {
+            get {
+                return ResourceManager.GetString("NameTB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Phone.
+        /// </summary>
+        public static string PhoneTB {
+            get {
+                return ResourceManager.GetString("PhoneTB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Surname.
+        /// </summary>
+        public static string SurnameTB {
+            get {
+                return ResourceManager.GetString("SurnameTB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Add info.
+        /// </summary>
+        public static string TextAdd {
+            get {
+                return ResourceManager.GetString("TextAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Log In.
         /// </summary>
         public static string TextAuth {
@@ -147,6 +291,33 @@ namespace ShilinWpf.Properties {
         public static string TextChooseLanguage {
             get {
                 return ResourceManager.GetString("TextChooseLanguage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Delete info.
+        /// </summary>
+        public static string TextDelete {
+            get {
+                return ResourceManager.GetString("TextDelete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Filter.
+        /// </summary>
+        public static string TextFilter {
+            get {
+                return ResourceManager.GetString("TextFilter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на No info.
+        /// </summary>
+        public static string TextGrid {
+            get {
+                return ResourceManager.GetString("TextGrid", resourceCulture);
             }
         }
         
@@ -169,7 +340,7 @@ namespace ShilinWpf.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Page 4.
+        ///   Ищет локализованную строку, похожую на Secret page .
         /// </summary>
         public static string TextPageFour {
             get {
@@ -178,7 +349,7 @@ namespace ShilinWpf.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Page 1.
+        ///   Ищет локализованную строку, похожую на Add client.
         /// </summary>
         public static string TextPageOne {
             get {
@@ -187,7 +358,7 @@ namespace ShilinWpf.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Page 3.
+        ///   Ищет локализованную строку, похожую на Add worker.
         /// </summary>
         public static string TextPageThree {
             get {
@@ -196,7 +367,7 @@ namespace ShilinWpf.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Page 2.
+        ///   Ищет локализованную строку, похожую на Add project.
         /// </summary>
         public static string TextPageTwo {
             get {
@@ -210,6 +381,15 @@ namespace ShilinWpf.Properties {
         public static string TextPassword {
             get {
                 return ResourceManager.GetString("TextPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Search.
+        /// </summary>
+        public static string TextSearch {
+            get {
+                return ResourceManager.GetString("TextSearch", resourceCulture);
             }
         }
         

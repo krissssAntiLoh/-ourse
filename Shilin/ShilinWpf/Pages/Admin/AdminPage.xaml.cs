@@ -24,5 +24,10 @@ namespace ShilinWpf.Pages.Admin
         {
             InitializeComponent();
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            AppData.MainFrame.Navigate(new Pages.NavigateP.ClientP());
+        }
     }
 }

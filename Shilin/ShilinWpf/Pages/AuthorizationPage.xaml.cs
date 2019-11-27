@@ -21,7 +21,7 @@ namespace ShilinWpf.Pages
     /// </summary>
     public partial class AuthorizationPage : Page
     {
-        public List<Entities.Client> clients;  
+        public List<Entities.Worker> workers;  
         private string _capchaText = "";
         public AuthorizationPage()
         {
@@ -31,7 +31,7 @@ namespace ShilinWpf.Pages
 
         private void BtnLogin_Click(object sender, RoutedEventArgs e)
         {
-            clients = AppData.Context.Client.ToList();
+            workers = AppData.Context.Worker.ToList();
 
             bool islogined = false;
 
@@ -41,9 +41,9 @@ namespace ShilinWpf.Pages
 
             //}
 
-            foreach (Entities.Client client in clients)
+            foreach (Entities.Worker worker in workers)
             {
-                if (client.Login == TBoxLogin.Text && client.Password == PBoxPassword.Password)
+                if (worker.Login == TBoxLogin.Text && worker.Password == PBoxPassword.Password)
                 {
                     islogined = true;
                     if (TbxCapcha.Text == _capchaText)
@@ -75,8 +75,8 @@ namespace ShilinWpf.Pages
         {
             Random random = new Random();
             _capchaText = "";
-            string allText = "1234567890QqWwEeRrTtYyUuIiOoPpAaSsDdFfGgHhJjKkLlZzXxCcVvBbNnMm";
-            for (int i = 0; i < 6; i++)
+            string allText = "1234567890QqWwEeRrTtYyUuOoPpAaSsDdFfGgHhJjKkZzXxCcVvBbNnMm";
+            for (int i = 0; i < 1; i++)
             {
                 _capchaText += allText[random.Next(allText.Length)];
             }

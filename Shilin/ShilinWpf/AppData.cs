@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace ShilinWpf
 {
-    public static class AppData
+    class AppData
     {
         public static Frame MainFrame;
 

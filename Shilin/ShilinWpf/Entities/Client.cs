@@ -20,7 +20,7 @@ namespace ShilinWpf.Entities
             this.Project = new HashSet<Project>();
         }
     
-        public string ClientID { get; set; }
+        public int ClientID { get; set; }
         public string Login { get; set; }
         public string Password { get; set; }
         public string Phone { get; set; }
