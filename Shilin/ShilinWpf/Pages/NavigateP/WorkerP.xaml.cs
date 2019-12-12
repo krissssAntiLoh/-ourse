@@ -1,6 +1,7 @@
 ﻿using ShilinWpf.Entities;
 using ShilinWpf.Pages;
 using ShilinWpf.Pages.AddEdit;
+using ShilinWpf.Pages.AddEditW;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -19,68 +20,68 @@ using System.Windows.Shapes;
 namespace ShilinWpf.Pages.NavigateP
 {
     /// <summary>
-    /// Логика взаимодействия для ClientP.xaml
+    /// Логика взаимодействия для WorkerP.xaml
     /// </summary>
-    public partial class ClientP : Page
+    public partial class WorkerP : Page
     {
-        public ClientP()
+        public WorkerP()
         {
             InitializeComponent();
 
             DGClient.AutoGenerateColumns = false;
-            DGClient.ItemsSource = AppData.Context.Client.ToList();
+            DGClient.ItemsSource = AppData.Context.Worker.ToList();
 
-            List<Client> listSearch = AppData.Context.Client.ToList();
-            listSearch.Insert(0, new Client
+            List<Worker> listSearch = AppData.Context.Worker.ToList();
+            listSearch.Insert(0, new Worker
             {
                 Login = Properties.Resources.AllText
             });
             CBFil.ItemsSource = listSearch;
             CBFil.SelectedIndex = 0;
         }
-      
-        private void ClientUpdate()
+
+        private void WorkerUpdate()
         {
-            var ListServ = AppData.Context.Client.ToList();
+            var ListServ = AppData.Context.Worker.ToList();
             if (CBFil.SelectedIndex > 0)
             {
-                ListServ = ListServ.Where(p => p.Login == (CBFil.SelectedItem as Client).Login).ToList();
+                ListServ = ListServ.Where(p => p.Login == (CBFil.SelectedItem as Worker).Login).ToList();
             }
             DGClient.ItemsSource = ListServ;
         }
-            private void BtnAdd_Click(object sender, RoutedEventArgs e)
-            {
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
             AddClientW add = new AddClientW();
             add.ShowDialog();
-            ClientUpdate();
-            }
+            WorkerUpdate();
+        }
 
-            private void UpdateText()
+        private void UpdateText()
+        {
+            var ListServ = AppData.Context.Client.ToList();
+            if (TBSearch.Text != "")
             {
-                var ListServ = AppData.Context.Client.ToList();
-                if (TBSearch.Text != "")
-                {
-                    ListServ = ListServ.Where(p => p.Login.ToLower().Contains(TBSearch.Text.ToLower())).ToList();
-                }
-                if (ListServ.Count == 0)
-                {
+                ListServ = ListServ.Where(p => p.Login.ToLower().Contains(TBSearch.Text.ToLower())).ToList();
+            }
+            if (ListServ.Count == 0)
+            {
                 DGClient.Visibility = Visibility.Hidden;
-                }
-                else
-                {
+            }
+            else
+            {
                 DGClient.ItemsSource = ListServ;
                 DGClient.Visibility = Visibility.Visible;
-                }
-
             }
+
+        }
 
         private void BtnDel_Click(object sender, RoutedEventArgs e)
         {
             try
             {
-                AppData.Context.Client.Remove((Client)DGClient.SelectedItem);
+                AppData.Context.Worker.Remove((Worker)DGClient.SelectedItem);
                 AppData.Context.SaveChanges();
-                ClientUpdate();
+                WorkerUpdate();
             }
             catch
             {
@@ -90,7 +91,7 @@ namespace ShilinWpf.Pages.NavigateP
 
         private void CBFil_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            ClientUpdate();
+            WorkerUpdate();
         }
 
         private void TBSearch_TextChanged(object sender, TextChangedEventArgs e)
@@ -107,9 +108,9 @@ namespace ShilinWpf.Pages.NavigateP
         {
             if (DGClient.SelectedItem != null)
             {
-                AddClientW add = new AddClientW(DGClient.SelectedItem as Client);
+                AddWorkerW add = new AddWorkerW(DGClient.SelectedItem as Worker);
                 add.ShowDialog();
-                ClientUpdate();
+                WorkerUpdate();
             }
             else
             {

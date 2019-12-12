@@ -13,23 +13,24 @@ using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using ShilinWpf.Entities;
 
-namespace ShilinWpf.Pages.AddEdit
+namespace ShilinWpf.Pages.AddEditW
 {
     /// <summary>
-    /// Логика взаимодействия для AddClientW.xaml
+    /// Логика взаимодействия для AddWorkerW.xaml
     /// </summary>
-    public partial class AddClientW : Window
+    public partial class AddWorkerW : Window
     {
-        Client _curc = null;
-        public AddClientW()
+        Worker _curw = null;
+        public AddWorkerW()
         {
             InitializeComponent();
             BTNAdd.Content = Properties.Resources.Add;
         }
-        public AddClientW(Client client)
+
+        public AddWorkerW(Worker client)
         {
             InitializeComponent();
-            _curc = client;
+            _curw = client;
             BTNAdd.Content = Properties.Resources.Edit;
         }
 
@@ -43,26 +44,28 @@ namespace ShilinWpf.Pages.AddEdit
         {
             try
             {
-                if (_curc == null)
+                if (_curw == null)
                 {
-                    Client client = new Client()
+                    Worker worker = new Worker()
                     {
-                        ClientID = AppData.Context.Client.Max(p => p.ClientID) + 1,
-                        Login = LoginClientTB.Text,
-                        Password = PasswordClientTB.Text,
-                        Phone = PhoneClientTB.Text,
-                        Email = EmailClientTB.Text,
+                        WorkerID = AppData.Context.Worker.Max(p => p.WorkerID) + 1,
+                        Name = NameWorkerTB.Text,
+                        Surname = SurnameWorkerTB.Text,
+                        Function = FunctionWorkerTB.Text,
+                        Login = LoginWorkerTB.Text,
+                        Password = PasswordWorkerTB.Text,
                     };
-                    AppData.Context.Client.Add(client);
+                    AppData.Context.Worker.Add(worker);
                     System.Windows.MessageBox.Show(Properties.Resources.MessageSuccessfullAdd, Properties.Resources.CaptionSuccessfully,
                         MessageBoxButton.OK, MessageBoxImage.Information);
                 }
                 else
                 {
-                    _curc.Login = LoginClientTB.Text;
-                    _curc.Password = PasswordClientTB.Text;
-                    _curc.Phone = PhoneClientTB.Text;
-                    _curc.Email = EmailClientTB.Text;
+                    _curw.Name = NameWorkerTB.Text;
+                    _curw.Surname = SurnameWorkerTB.Text;
+                    _curw.Function = FunctionWorkerTB.Text;
+                    _curw.Login = LoginWorkerTB.Text;
+                    _curw.Password = PasswordWorkerTB.Text;
                     System.Windows.MessageBox.Show(Properties.Resources.MessageSuccessfullEdit, Properties.Resources.CaptionSuccessfully,
                     MessageBoxButton.OK, MessageBoxImage.Information);
                 }
@@ -77,12 +80,13 @@ namespace ShilinWpf.Pages.AddEdit
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            if (_curc != null)
+            if (_curw != null)
             {
-                LoginClientTB.Text = _curc.Login;
-                PasswordClientTB.Text = _curc.Password;
-                PhoneClientTB.Text = _curc.Phone;
-                EmailClientTB.Text = _curc.Email;
+                NameWorkerTB.Text = _curw.Name;
+                SurnameWorkerTB.Text = _curw.Surname;
+                FunctionWorkerTB.Text = _curw.Function ;
+                LoginWorkerTB.Text = _curw.Login ;
+                PasswordWorkerTB.Text = _curw.Password ;
             }
         }
     }

@@ -133,6 +133,15 @@ namespace ShilinWpf.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Successfully!.
+        /// </summary>
+        public static string CaptionSuccessfully {
+            get {
+                return ResourceManager.GetString("CaptionSuccessfully", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Date added.
         /// </summary>
         public static string DateAdd {
@@ -147,6 +156,15 @@ namespace ShilinWpf.Properties {
         public static string DateEnd {
             get {
                 return ResourceManager.GetString("DateEnd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Edit.
+        /// </summary>
+        public static string Edit {
+            get {
+                return ResourceManager.GetString("Edit", resourceCulture);
             }
         }
         
@@ -232,6 +250,24 @@ namespace ShilinWpf.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Successfully added!.
+        /// </summary>
+        public static string MessageSuccessfullAdd {
+            get {
+                return ResourceManager.GetString("MessageSuccessfullAdd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Successfully edited!.
+        /// </summary>
+        public static string MessageSuccessfullEdit {
+            get {
+                return ResourceManager.GetString("MessageSuccessfullEdit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Title.
         /// </summary>
         public static string NameNoHum {
@@ -255,6 +291,15 @@ namespace ShilinWpf.Properties {
         public static string PhoneTB {
             get {
                 return ResourceManager.GetString("PhoneTB", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на .
+        /// </summary>
+        public static string String1 {
+            get {
+                return ResourceManager.GetString("String1", resourceCulture);
             }
         }
         

@@ -141,6 +141,12 @@
   <data name="CaptionQuestion" xml:space="preserve">
     <value>Уверены?</value>
   </data>
+  <data name="CaptionSuccessfully" xml:space="preserve">
+    <value>Успешно!</value>
+  </data>
+  <data name="Edit" xml:space="preserve">
+    <value>Редактирвать</value>
+  </data>
   <data name="EmailTB" xml:space="preserve">
     <value>Почта</value>
   </data>
@@ -167,6 +173,12 @@
   </data>
   <data name="MessageLoginFailed" xml:space="preserve">
     <value>Логин или пароль введен не верно!</value>
+  </data>
+  <data name="MessageSuccessfullAdd" xml:space="preserve">
+    <value>Успешно добавлено!</value>
+  </data>
+  <data name="MessageSuccessfullEdit" xml:space="preserve">
+    <value>Успешно изменено!</value>
   </data>
   <data name="NameNoHum" xml:space="preserve">
     <value>Наименование</value>

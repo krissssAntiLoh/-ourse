@@ -1,29 +1,33 @@
-﻿<Window x:Class="ShilinWpf.Pages.AddEdit.AddClientW"
+﻿<Window x:Class="ShilinWpf.Pages.AddEditW.AddWorkerW"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ShilinWpf.Pages.AddEdit"
+        xmlns:local="clr-namespace:ShilinWpf.Pages.AddEditW"
         mc:Ignorable="d"
         xmlns:props="clr-namespace:ShilinWpf.Properties"
-        Title="AddClientW" Height="450" Width="800" Loaded="Window_Loaded">
+        Title="AddWorkerW" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
             <StackPanel Orientation="Horizontal">
+                <TextBlock Width="75" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.NameTB}"/>
+                <TextBox x:Name="NameWorkerTB"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Width="75" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.SurnameTB}"/>
+                <TextBox x:Name="SurnameWorkerTB"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
+                <TextBlock Width="75" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.FunctionTB}"/>
+                <TextBox x:Name="FunctionWorkerTB"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal">
                 <TextBlock Width="75" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextLogin}"/>
-                <TextBox x:Name="LoginClientTB"/>
+                <TextBox x:Name="LoginWorkerTB"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Width="75" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextPassword}"/>
-                <TextBox x:Name="PasswordClientTB"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="75" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.PhoneTB}"/>
-                <TextBox x:Name="PhoneClientTB"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="75" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.EmailTB}"/>
-                <TextBox x:Name="EmailClientTB"/>
+                <TextBox x:Name="PasswordWorkerTB"/>
             </StackPanel>
             <StackPanel>
                 <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="175" Margin="5" Height="27" Content="{x:Static props:Resources.Add}" x:Name="BTNAdd" Click="BTNAdd_Click"/>
