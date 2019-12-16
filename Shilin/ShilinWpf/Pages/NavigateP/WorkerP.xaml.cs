@@ -51,7 +51,7 @@ namespace ShilinWpf.Pages.NavigateP
         }
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
-            AddClientW add = new AddClientW();
+            AddWorkerW add = new AddWorkerW();
             add.ShowDialog();
             WorkerUpdate();
         }

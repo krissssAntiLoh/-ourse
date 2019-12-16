@@ -80,6 +80,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\AddEditW\AddProjectW.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\AddEditW\AddWorkerW.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -96,6 +100,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\NavigateP\ProjectP.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\NavigateP\WorkerP.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -104,6 +112,9 @@
   <ItemGroup>
     <Compile Include="Pages\AddEditW\AddClientW.xaml.cs">
       <DependentUpon>AddClientW.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\AddEditW\AddProjectW.xaml.cs">
+      <DependentUpon>AddProjectW.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\AddEditW\AddWorkerW.xaml.cs">
       <DependentUpon>AddWorkerW.xaml</DependentUpon>
@@ -149,6 +160,9 @@
     </Compile>
     <Compile Include="Pages\NavigateP\ClientP.xaml.cs">
       <DependentUpon>ClientP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NavigateP\ProjectP.xaml.cs">
+      <DependentUpon>ProjectP.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\NavigateP\WorkerP.xaml.cs">
       <DependentUpon>WorkerP.xaml</DependentUpon>
