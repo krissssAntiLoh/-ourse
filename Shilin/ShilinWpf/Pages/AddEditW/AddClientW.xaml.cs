@@ -41,6 +41,22 @@ namespace ShilinWpf.Pages.AddEdit
 
         private void BTNAdd_Click(object sender, RoutedEventArgs e)
         {
+            StringBuilder error = new StringBuilder();
+            if (string.IsNullOrWhiteSpace(LoginClientTB.Text))
+                error.AppendLine(Properties.Resources.ErrorLogin);
+            if (string.IsNullOrWhiteSpace(PasswordClientTB.Text))
+                error.AppendLine(Properties.Resources.ErrorPassword);
+            if (!PhoneClientMTB.MaskCompleted)
+                error.AppendLine(Properties.Resources.ErrorPhone);
+            if (string.IsNullOrWhiteSpace(EmailClientTB.Text))
+                error.AppendLine(Properties.Resources.ErrorEmail);
+            if (!error.ToString().Equals(""))
+            {
+                System.Windows.MessageBox.Show(Properties.Resources.ErrorSomethingWrong + "\n\n" + error, Properties.Resources.CaptionError,
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             try
             {
                 if (_curc == null)
@@ -50,7 +66,7 @@ namespace ShilinWpf.Pages.AddEdit
                         ClientID = AppData.Context.Client.Max(p => p.ClientID) + 1,
                         Login = LoginClientTB.Text,
                         Password = PasswordClientTB.Text,
-                        Phone = PhoneClientTB.Text,
+                        Phone = PhoneClientMTB.Text,
                         Email = EmailClientTB.Text,
                     };
                     AppData.Context.Client.Add(client);
@@ -61,7 +77,7 @@ namespace ShilinWpf.Pages.AddEdit
                 {
                     _curc.Login = LoginClientTB.Text;
                     _curc.Password = PasswordClientTB.Text;
-                    _curc.Phone = PhoneClientTB.Text;
+                    _curc.Phone = PhoneClientMTB.Text;
                     _curc.Email = EmailClientTB.Text;
                     System.Windows.MessageBox.Show(Properties.Resources.MessageSuccessfullEdit, Properties.Resources.CaptionSuccessfully,
                     MessageBoxButton.OK, MessageBoxImage.Information);
@@ -81,7 +97,7 @@ namespace ShilinWpf.Pages.AddEdit
             {
                 LoginClientTB.Text = _curc.Login;
                 PasswordClientTB.Text = _curc.Password;
-                PhoneClientTB.Text = _curc.Phone;
+                PhoneClientMTB.Text = _curc.Phone;
                 EmailClientTB.Text = _curc.Email;
             }
         }

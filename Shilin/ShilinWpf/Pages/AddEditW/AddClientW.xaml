@@ -5,6 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ShilinWpf.Pages.AddEdit"
         mc:Ignorable="d"
+        xmlns:forms="clr-namespace:System.Windows.Forms;assembly=System.Windows.Forms"
         xmlns:props="clr-namespace:ShilinWpf.Properties"
         Title="AddClientW" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
@@ -19,7 +20,9 @@
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Width="75" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.PhoneTB}"/>
-                <TextBox x:Name="PhoneClientTB"/>
+                <WindowsFormsHost Width="175" Margin="5" Height="25" >
+                    <forms:MaskedTextBox x:Name="PhoneClientMTB" Mask="+7 000 000-00-00"/>
+                </WindowsFormsHost>                
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Width="75" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.EmailTB}"/>

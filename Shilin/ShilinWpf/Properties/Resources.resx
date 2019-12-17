@@ -159,6 +159,45 @@
   <data name="EmailTB" xml:space="preserve">
     <value>Email</value>
   </data>
+  <data name="ErrorAssets" xml:space="preserve">
+    <value>Field "Assets" is empty</value>
+  </data>
+  <data name="ErrorClient" xml:space="preserve">
+    <value>Field "Client" is empty</value>
+  </data>
+  <data name="ErrorDate" xml:space="preserve">
+    <value>Fields "Dates" is not correct</value>
+  </data>
+  <data name="ErrorDateAdd" xml:space="preserve">
+    <value>Field "Date added" is empty</value>
+  </data>
+  <data name="ErrorEmail" xml:space="preserve">
+    <value>Field "Email" is empty</value>
+  </data>
+  <data name="ErrorFuncion" xml:space="preserve">
+    <value>Field "Function" is empty</value>
+  </data>
+  <data name="ErrorLogin" xml:space="preserve">
+    <value>Field "Login" is empty</value>
+  </data>
+  <data name="ErrorPassword" xml:space="preserve">
+    <value>Field "Password" is empty</value>
+  </data>
+  <data name="ErrorPhone" xml:space="preserve">
+    <value>Field "Phone" is empty</value>
+  </data>
+  <data name="ErrorSomethingWrong" xml:space="preserve">
+    <value>You entered something wrong!</value>
+  </data>
+  <data name="ErrorSurname" xml:space="preserve">
+    <value>Field "Surname" is empty</value>
+  </data>
+  <data name="ErrorTypeService" xml:space="preserve">
+    <value>Field "TypeService" is empty</value>
+  </data>
+  <data name="ErrorWorker" xml:space="preserve">
+    <value>Field "Worker" is empty</value>
+  </data>
   <data name="FunctionTB" xml:space="preserve">
     <value>Function</value>
   </data>

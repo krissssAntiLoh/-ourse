@@ -42,6 +42,24 @@ namespace ShilinWpf.Pages.AddEditW
 
         private void BTNAdd_Click(object sender, RoutedEventArgs e)
         {
+            StringBuilder error = new StringBuilder();
+            if (string.IsNullOrWhiteSpace(NameWorkerTB.Text))
+                error.AppendLine(Properties.Resources.ErrorWorker);
+            if (string.IsNullOrWhiteSpace(SurnameWorkerTB.Text))
+                error.AppendLine(Properties.Resources.ErrorSurname);
+            if (!(CBFunction.SelectedItem is TypeService))
+                error.AppendLine(Properties.Resources.ErrorFuncion);
+            if (string.IsNullOrWhiteSpace(LoginWorkerTB.Text))
+                error.AppendLine(Properties.Resources.ErrorLogin);
+            if (string.IsNullOrWhiteSpace(PasswordWorkerTB.Text))
+                error.AppendLine(Properties.Resources.ErrorPassword);
+            if (!error.ToString().Equals(""))
+            {
+                System.Windows.MessageBox.Show(Properties.Resources.ErrorSomethingWrong + "\n\n" + error, Properties.Resources.CaptionError,
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+
             try
             {
                 if (_curw == null)

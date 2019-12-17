@@ -36,6 +36,30 @@ namespace ShilinWpf.Pages.AddEditW
 
         private void BTNAdd_Click(object sender, RoutedEventArgs e)
         {
+            StringBuilder error = new StringBuilder();
+            if (!(IDClients.SelectedItem is Client))
+                error.AppendLine(Properties.Resources.ErrorClient);
+            if (!(IDWorker.SelectedItem is Worker))
+                error.AppendLine(Properties.Resources.ErrorWorker);
+            if (!(IDAssets.SelectedItem is Assets))
+                error.AppendLine(Properties.Resources.ErrorAssets);
+            if (!(IDTypeService.SelectedItem is TypeService))
+                error.AppendLine(Properties.Resources.ErrorEmail);
+            if (DTPDateAdd.SelectedDate == null)
+                error.AppendLine(Properties.Resources.ErrorDateAdd);
+            else 
+            {
+                if (DTPDateEnd.SelectedDate != null)
+                    if (DTPDateAdd.SelectedDate>DTPDateEnd.SelectedDate)
+                        error.AppendLine(Properties.Resources.ErrorDate);
+            }
+            if (!error.ToString().Equals(""))
+            {
+                System.Windows.MessageBox.Show(Properties.Resources.ErrorSomethingWrong + "\n\n" + error, Properties.Resources.CaptionError,
+                    MessageBoxButton.OK, MessageBoxImage.Error);
+                return;
+            }
+            
             try
             {
                 if (_curp == null)

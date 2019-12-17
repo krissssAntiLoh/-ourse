@@ -8,34 +8,36 @@
         mc:Ignorable="d"
         Title="AddProjectW" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
-        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="90" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.IdClientTB}"/>
-                <ComboBox DisplayMemberPath="Login" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="175"  IsEditable="True" Name="IDClients" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="90" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.IdWorkerTB}"/>
-                <ComboBox DisplayMemberPath="FullName" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="175"  IsEditable="True" Name="IDWorker" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="90" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.IdAssetsTB}"/>
-                <ComboBox DisplayMemberPath="Name" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="175"  IsEditable="True" Name="IDAssets"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="90" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.IdTypeServiceTB}"/>
-                <ComboBox DisplayMemberPath="Name" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="175"  IsEditable="True" Name="IDTypeService" />
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="90" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.DateAdd}"/>
-                <DatePicker x:Name="DTPDateAdd" Width="180"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal">
-                <TextBlock Width="90" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.DateEnd}"/>
-                <DatePicker x:Name="DTPDateEnd" Width="180" Height="40"/>
-            </StackPanel>
-            <StackPanel Orientation="Horizontal" >
-                <TextBlock Width="90" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.DescriptionTB}"/>
-                <TextBox x:Name="TBDescription" Height="40" Width="180"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
+            <StackPanel Margin="0,0,15,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="110" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextClient}"/>
+                    <ComboBox DisplayMemberPath="Login" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="175" Name="IDClients" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="110" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextWorker}"/>
+                    <ComboBox DisplayMemberPath="FullName" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="175"  IsEditable="True" Name="IDWorker" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="110" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextAssets}"/>
+                    <ComboBox DisplayMemberPath="Name" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="175"  IsEditable="True" Name="IDAssets"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="110" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextTypeService}"/>
+                    <ComboBox DisplayMemberPath="Name" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="175"  IsEditable="True" Name="IDTypeService" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="110" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextDateAdd}"/>
+                    <DatePicker x:Name="DTPDateAdd" Width="175" Margin="5"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="110" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextDateEnd}"/>
+                    <DatePicker x:Name="DTPDateEnd" Width="175" Margin="5"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" >
+                    <TextBlock Width="110" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.DescriptionTB}"/>
+                    <TextBox x:Name="TBDescription" Height="40" Width="175"/>
+                </StackPanel>
             </StackPanel>
             <StackPanel>
                 <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="175" Margin="5" Height="27" Content="{x:Static props:Resources.Add}" x:Name="BTNAdd" Click="BTNAdd_Click"/>

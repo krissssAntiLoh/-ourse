@@ -153,6 +153,45 @@
   <data name="EmailTB" xml:space="preserve">
     <value>Почта</value>
   </data>
+  <data name="ErrorAssets" xml:space="preserve">
+    <value>Поле "Состояние" не заполнено</value>
+  </data>
+  <data name="ErrorClient" xml:space="preserve">
+    <value>Поле "Клиент" не заполнено</value>
+  </data>
+  <data name="ErrorDate" xml:space="preserve">
+    <value>Поля "Даты" заполнены не корректно</value>
+  </data>
+  <data name="ErrorDateAdd" xml:space="preserve">
+    <value>Поле "Дата добавления" не заполнено</value>
+  </data>
+  <data name="ErrorEmail" xml:space="preserve">
+    <value>Поле "Email" не заполнено</value>
+  </data>
+  <data name="ErrorFuncion" xml:space="preserve">
+    <value>Поле "Должность" не заполнено</value>
+  </data>
+  <data name="ErrorLogin" xml:space="preserve">
+    <value>Поле "Логин" не заполнено</value>
+  </data>
+  <data name="ErrorPassword" xml:space="preserve">
+    <value>Поле "Пароль" не заполнено</value>
+  </data>
+  <data name="ErrorPhone" xml:space="preserve">
+    <value>Поле "Телефон" не заполнено</value>
+  </data>
+  <data name="ErrorSomethingWrong" xml:space="preserve">
+    <value>Вы ввели что-то не так</value>
+  </data>
+  <data name="ErrorSurname" xml:space="preserve">
+    <value>Поле "Фамилия" не заполнено</value>
+  </data>
+  <data name="ErrorTypeService" xml:space="preserve">
+    <value>Поле "Тип" не заполнено</value>
+  </data>
+  <data name="ErrorWorker" xml:space="preserve">
+    <value>Поле "Работник" не заполнено</value>
+  </data>
   <data name="FunctionTB" xml:space="preserve">
     <value>Должность</value>
   </data>
