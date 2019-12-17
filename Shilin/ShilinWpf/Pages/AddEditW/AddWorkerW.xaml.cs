@@ -27,16 +27,16 @@ namespace ShilinWpf.Pages.AddEditW
             BTNAdd.Content = Properties.Resources.Add;
         }
 
-        public AddWorkerW(Worker client)
+        public AddWorkerW(Worker worker)
         {
             InitializeComponent();
-            _curw = client;
+            _curw = worker;
             BTNAdd.Content = Properties.Resources.Edit;
         }
 
         private void BTNNo_Click(object sender, RoutedEventArgs e)
         {
-            this.Close();
+            DialogResult = false;
         }
 
 
@@ -51,7 +51,7 @@ namespace ShilinWpf.Pages.AddEditW
                         WorkerID = AppData.Context.Worker.Max(p => p.WorkerID) + 1,
                         Name = NameWorkerTB.Text,
                         Surname = SurnameWorkerTB.Text,
-                        Function = FunctionWorkerTB.Text,
+                        Function = CBFunction.SelectedItem as Function,
                         Login = LoginWorkerTB.Text,
                         Password = PasswordWorkerTB.Text,
                     };
@@ -63,7 +63,7 @@ namespace ShilinWpf.Pages.AddEditW
                 {
                     _curw.Name = NameWorkerTB.Text;
                     _curw.Surname = SurnameWorkerTB.Text;
-                    _curw.Function = FunctionWorkerTB.Text;
+                    _curw.Function = CBFunction.SelectedItem as Function;
                     _curw.Login = LoginWorkerTB.Text;
                     _curw.Password = PasswordWorkerTB.Text;
                     System.Windows.MessageBox.Show(Properties.Resources.MessageSuccessfullEdit, Properties.Resources.CaptionSuccessfully,
@@ -80,13 +80,56 @@ namespace ShilinWpf.Pages.AddEditW
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
+            var functions = AppData.Context.Function.ToList();
+            var newFunction = new Function()
+            {
+                FunctionID = 0,
+                Name = "Добавить новую профессию"
+            };
+            functions.Insert(0, newFunction);
+            CBFunction.ItemsSource = functions;
             if (_curw != null)
             {
                 NameWorkerTB.Text = _curw.Name;
                 SurnameWorkerTB.Text = _curw.Surname;
-                FunctionWorkerTB.Text = _curw.Function ;
+                CBFunction.SelectedItem = _curw.Function;
                 LoginWorkerTB.Text = _curw.Login ;
                 PasswordWorkerTB.Text = _curw.Password ;
+            }
+        }
+
+        private void CBFunction_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if ((sender as ComboBox).SelectedIndex == 0)
+            {
+                if ((sender as ComboBox).Text == "")
+                {
+                    System.Windows.MessageBox.Show("Нельзя добавить профессию без названия.", Properties.Resources.CaptionError, MessageBoxButton.OK, MessageBoxImage.Error);
+                    (sender as ComboBox).SelectedItem = null;
+                    return;
+                }
+                if (AppData.Context.Function.Where(p => p.Name.ToLower() == CBFunction.Text.ToLower()).Count() > 0)
+                {
+                    System.Windows.MessageBox.Show("Такая профессия уже есть.", Properties.Resources.CaptionError, MessageBoxButton.OK, MessageBoxImage.Error);
+                    (sender as ComboBox).SelectedItem = AppData.Context.Function.FirstOrDefault(p => p.Name.ToLower() == CBFunction.Text.ToLower());
+                    return;
+                }
+                var function = new Function()
+                {
+                    FunctionID = AppData.Context.Function.Max(p => p.FunctionID) + 1,
+                    Name = (sender as ComboBox).Text
+                };
+                AppData.Context.Function.Add(function);
+                AppData.Context.SaveChanges();
+                var functions = AppData.Context.Function.ToList(); 
+                var newFunction = new Function()
+                {
+                    FunctionID = 0,
+                    Name = "Добавить новую профессию"
+                };
+                functions.Insert(0, newFunction);
+                (sender as ComboBox).ItemsSource = functions;
+                (sender as ComboBox).SelectedItem = function;
             }
         }
     }

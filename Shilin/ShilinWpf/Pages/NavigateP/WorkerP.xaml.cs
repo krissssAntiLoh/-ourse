@@ -28,40 +28,34 @@ namespace ShilinWpf.Pages.NavigateP
         {
             InitializeComponent();
 
-            DGClient.AutoGenerateColumns = false;
-            DGClient.ItemsSource = AppData.Context.Worker.ToList();
 
-            List<Worker> listSearch = AppData.Context.Worker.ToList();
-            listSearch.Insert(0, new Worker
+            var listSearch = AppData.Context.Function.ToList();
+            listSearch.Insert(0, new Function
             {
-                Login = Properties.Resources.AllText
+                Name = Properties.Resources.AllText
             });
             CBFil.ItemsSource = listSearch;
             CBFil.SelectedIndex = 0;
+            UpdateData();
         }
 
-        private void WorkerUpdate()
-        {
-            var ListServ = AppData.Context.Worker.ToList();
-            if (CBFil.SelectedIndex > 0)
-            {
-                ListServ = ListServ.Where(p => p.Login == (CBFil.SelectedItem as Worker).Login).ToList();
-            }
-            DGClient.ItemsSource = ListServ;
-        }
         private void BtnAdd_Click(object sender, RoutedEventArgs e)
         {
             AddWorkerW add = new AddWorkerW();
             add.ShowDialog();
-            WorkerUpdate();
+            UpdateData();
         }
 
-        private void UpdateText()
+        private void UpdateData()
         {
-            var ListServ = AppData.Context.Client.ToList();
+            var ListServ = AppData.Context.Worker.ToList();
+            if (CBFil.SelectedIndex > 0)
+            {
+                ListServ = ListServ.Where(p => p.Function == (CBFil.SelectedItem as Function)).ToList();
+            }
             if (TBSearch.Text != "")
             {
-                ListServ = ListServ.Where(p => p.Login.ToLower().Contains(TBSearch.Text.ToLower())).ToList();
+                ListServ = ListServ.Where(p => p.FullName.Contains(TBSearch.Text.ToLower())).ToList();
             }
             if (ListServ.Count == 0)
             {
@@ -81,7 +75,7 @@ namespace ShilinWpf.Pages.NavigateP
             {
                 AppData.Context.Worker.Remove((Worker)DGClient.SelectedItem);
                 AppData.Context.SaveChanges();
-                WorkerUpdate();
+                UpdateData();
             }
             catch
             {
@@ -91,12 +85,12 @@ namespace ShilinWpf.Pages.NavigateP
 
         private void CBFil_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            WorkerUpdate();
+            UpdateData();
         }
 
         private void TBSearch_TextChanged(object sender, TextChangedEventArgs e)
         {
-            UpdateText();
+            UpdateData();
         }
 
         private void DGClient_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -110,7 +104,7 @@ namespace ShilinWpf.Pages.NavigateP
             {
                 AddWorkerW add = new AddWorkerW(DGClient.SelectedItem as Worker);
                 add.ShowDialog();
-                WorkerUpdate();
+                UpdateData();
             }
             else
             {

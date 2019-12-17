@@ -150,6 +150,9 @@
   <data name="DateEnd" xml:space="preserve">
     <value>Date close</value>
   </data>
+  <data name="DescriptionTB" xml:space="preserve">
+    <value>Description</value>
+  </data>
   <data name="Edit" xml:space="preserve">
     <value>Edit</value>
   </data>
@@ -204,11 +207,23 @@
   <data name="TextAdd" xml:space="preserve">
     <value>Add info</value>
   </data>
+  <data name="TextAssets" xml:space="preserve">
+    <value>Assets</value>
+  </data>
   <data name="TextAuth" xml:space="preserve">
     <value>Log In</value>
   </data>
   <data name="TextChooseLanguage" xml:space="preserve">
     <value>Choose the language:</value>
+  </data>
+  <data name="TextClient" xml:space="preserve">
+    <value>Client</value>
+  </data>
+  <data name="TextDateAdd" xml:space="preserve">
+    <value>Date added</value>
+  </data>
+  <data name="TextDateEnd" xml:space="preserve">
+    <value>Date Ended</value>
   </data>
   <data name="TextDelete" xml:space="preserve">
     <value>Delete info</value>
@@ -245,5 +260,11 @@
   </data>
   <data name="TextSupportCenter" xml:space="preserve">
     <value>Support center</value>
+  </data>
+  <data name="TextTypeService" xml:space="preserve">
+    <value>Type Service</value>
+  </data>
+  <data name="TextWorker" xml:space="preserve">
+    <value>Worker</value>
   </data>
 </root>

@@ -12,23 +12,18 @@ namespace ShilinWpf.Entities
     using System;
     using System.Collections.Generic;
     
-    public partial class Worker
+    public partial class Function
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Worker()
+        public Function()
         {
-            this.Project = new HashSet<Project>();
+            this.Worker = new HashSet<Worker>();
         }
     
-        public int WorkerID { get; set; }
-        public string Surname { get; set; }
+        public int FunctionID { get; set; }
         public string Name { get; set; }
-        public int IdFunction { get; set; }
-        public string Login { get; set; }
-        public string Password { get; set; }
     
-        public virtual Function Function { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Project> Project { get; set; }
+        public virtual ICollection<Worker> Worker { get; set; }
     }
 }

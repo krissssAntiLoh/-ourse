@@ -38,7 +38,7 @@ namespace ShilinWpf.Pages.NavigateP
             CBFil.ItemsSource = listSearch;
             CBFil.SelectedIndex = 0;
         }
-      
+
         private void ClientUpdate()
         {
             var ListServ = AppData.Context.Client.ToList();
@@ -48,31 +48,32 @@ namespace ShilinWpf.Pages.NavigateP
             }
             DGClient.ItemsSource = ListServ;
         }
-            private void BtnAdd_Click(object sender, RoutedEventArgs e)
-            {
+
+        private void BtnAdd_Click(object sender, RoutedEventArgs e)
+        {
             AddClientW add = new AddClientW();
             add.ShowDialog();
             ClientUpdate();
-            }
+        }
 
-            private void UpdateText()
+        private void UpdateText()
+        {
+            var ListServ = AppData.Context.Client.ToList();
+            if (TBSearch.Text != "")
             {
-                var ListServ = AppData.Context.Client.ToList();
-                if (TBSearch.Text != "")
-                {
-                    ListServ = ListServ.Where(p => p.Login.ToLower().Contains(TBSearch.Text.ToLower())).ToList();
-                }
-                if (ListServ.Count == 0)
-                {
+                ListServ = ListServ.Where(p => p.Login.ToLower().Contains(TBSearch.Text.ToLower())).ToList();
+            }
+            if (ListServ.Count == 0)
+            {
                 DGClient.Visibility = Visibility.Hidden;
-                }
-                else
-                {
+            }
+            else
+            {
                 DGClient.ItemsSource = ListServ;
                 DGClient.Visibility = Visibility.Visible;
-                }
-
             }
+
+        }
 
         private void BtnDel_Click(object sender, RoutedEventArgs e)
         {

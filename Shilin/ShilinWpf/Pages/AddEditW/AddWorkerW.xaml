@@ -18,8 +18,9 @@
                 <TextBox x:Name="SurnameWorkerTB"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
+                
                 <TextBlock Width="75" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.FunctionTB}"/>
-                <TextBox x:Name="FunctionWorkerTB"/>
+                <ComboBox DisplayMemberPath="Name" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="175"  IsEditable="True" Name="CBFunction" SelectionChanged="CBFunction_SelectionChanged"/>
             </StackPanel>
             <StackPanel Orientation="Horizontal">
                 <TextBlock Width="75" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextLogin}"/>
@@ -34,5 +35,6 @@
                 <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="175" Margin="5" Height="27" Content="{x:Static props:Resources.Cancel}" x:Name="BTNNo"  Click="BTNNo_Click"/>
             </StackPanel>
         </StackPanel>
+        
     </Grid>
 </Window>

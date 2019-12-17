@@ -72,6 +72,10 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AppData.cs" />
+    <Compile Include="Entities\ClassWorker.cs" />
+    <Compile Include="Entities\Function.cs">
+      <DependentUpon>ModelShilinSupport.tt</DependentUpon>
+    </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -96,11 +100,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\NavigateP\ClientP.xaml">
+    <Page Include="Pages\NavigateP\ProjectP.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Pages\NavigateP\ProjectP.xaml">
+    <Page Include="Pages\NavigateP\ClientP.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -158,11 +162,11 @@
     <Compile Include="Entities\Worker.cs">
       <DependentUpon>ModelShilinSupport.tt</DependentUpon>
     </Compile>
-    <Compile Include="Pages\NavigateP\ClientP.xaml.cs">
-      <DependentUpon>ClientP.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Pages\NavigateP\ProjectP.xaml.cs">
       <DependentUpon>ProjectP.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\NavigateP\ClientP.xaml.cs">
+      <DependentUpon>ClientP.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\NavigateP\WorkerP.xaml.cs">
       <DependentUpon>WorkerP.xaml</DependentUpon>

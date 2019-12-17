@@ -32,7 +32,7 @@ namespace ShilinWpf.Pages.Admin
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            AppData.MainFrame.Navigate(new Pages.NavigateP.ClientP());
+            AppData.MainFrame.Navigate(new Pages.NavigateP.AddProjectP());
         }
 
         private void Button_Click_3(object sender, RoutedEventArgs e)

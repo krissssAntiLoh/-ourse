@@ -144,6 +144,9 @@
   <data name="CaptionSuccessfully" xml:space="preserve">
     <value>Успешно!</value>
   </data>
+  <data name="DescriptionTB" xml:space="preserve">
+    <value>Описание</value>
+  </data>
   <data name="Edit" xml:space="preserve">
     <value>Редактирвать</value>
   </data>
@@ -195,11 +198,23 @@
   <data name="TextAdd" xml:space="preserve">
     <value>Добавить данные</value>
   </data>
+  <data name="TextAssets" xml:space="preserve">
+    <value>Состояние</value>
+  </data>
   <data name="TextAuth" xml:space="preserve">
     <value>Войти</value>
   </data>
   <data name="TextChooseLanguage" xml:space="preserve">
     <value>Выберите язык:</value>
+  </data>
+  <data name="TextClient" xml:space="preserve">
+    <value>Клиент</value>
+  </data>
+  <data name="TextDateAdd" xml:space="preserve">
+    <value>Дата добавления</value>
+  </data>
+  <data name="TextDateEnd" xml:space="preserve">
+    <value>Дата закрытия</value>
   </data>
   <data name="TextDelete" xml:space="preserve">
     <value>Удалить данные </value>
@@ -236,5 +251,11 @@
   </data>
   <data name="TextSupportCenter" xml:space="preserve">
     <value>Центр поддержки</value>
+  </data>
+  <data name="TextTypeService" xml:space="preserve">
+    <value>Тип</value>
+  </data>
+  <data name="TextWorker" xml:space="preserve">
+    <value>Работник</value>
   </data>
 </root>
