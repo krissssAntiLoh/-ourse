@@ -7,7 +7,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace ShilinWpf.Entities
+namespace NorbitWpf.Entities
 {
     using System;
     using System.Collections.Generic;

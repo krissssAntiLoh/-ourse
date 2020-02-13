@@ -11,9 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using ShilinWpf.Entities;
+using NorbitWpf.Entities;
 
-namespace ShilinWpf.Pages.AddEditW
+namespace NorbitWpf.Pages.AddEditW
 {
     /// <summary>
     /// Interaction logic for AddProjectW.xaml

@@ -15,7 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ShilinWpf
+namespace NorbitWpf
 {
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml

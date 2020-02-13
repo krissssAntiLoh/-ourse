@@ -1,11 +1,11 @@
-﻿<Window x:Class="ShilinWpf.Pages.AddEditW.AddWorkerW"
+﻿<Window x:Class="NorbitWpf.Pages.AddEditW.AddWorkerW"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:ShilinWpf.Pages.AddEditW"
+        xmlns:local="clr-namespace:NorbitWpf.Pages.AddEditW"
         mc:Ignorable="d"
-        xmlns:props="clr-namespace:ShilinWpf.Properties"
+        xmlns:props="clr-namespace:NorbitWpf.Properties"
         Title="AddWorkerW" Height="450" Width="800" Loaded="Window_Loaded">
     <Grid>
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">

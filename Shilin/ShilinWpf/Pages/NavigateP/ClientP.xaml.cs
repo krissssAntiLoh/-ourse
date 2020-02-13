@@ -1,6 +1,6 @@
-﻿using ShilinWpf.Entities;
-using ShilinWpf.Pages;
-using ShilinWpf.Pages.AddEdit;
+﻿using NorbitWpf.Entities;
+using NorbitWpf.Pages;
+using NorbitWpf.Pages.AddEdit;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,7 +16,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ShilinWpf.Pages.NavigateP
+namespace NorbitWpf.Pages.NavigateP
 {
     /// <summary>
     /// Логика взаимодействия для ClientP.xaml

@@ -1,0 +1,48 @@
+﻿<Window x:Class="ShilinWpf.Pages.AddEditW.AddProjectW"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ShilinWpf.Pages.AddEditW"
+        xmlns:props="clr-namespace:ShilinWpf.Properties"
+        mc:Ignorable="d"
+        Title="AddProjectW" Height="450" Width="800" Loaded="Window_Loaded">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,0,0,0">
+            <StackPanel Margin="0,0,15,0">
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="110" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextClient}"/>
+                    <ComboBox DisplayMemberPath="Login" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="175" Name="IDClients" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="110" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextWorker}"/>
+                    <ComboBox DisplayMemberPath="FullName" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="175"  IsEditable="True" Name="IDWorker" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="110" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextAssets}"/>
+                    <ComboBox DisplayMemberPath="Name" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="175"  IsEditable="True" Name="IDAssets"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="110" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextTypeService}"/>
+                    <ComboBox DisplayMemberPath="Name" HorizontalAlignment="Left"  VerticalAlignment="Top" Width="175"  IsEditable="True" Name="IDTypeService" />
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="110" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextDateAdd}"/>
+                    <DatePicker x:Name="DTPDateAdd" Width="175" Margin="5"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal">
+                    <TextBlock Width="110" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.TextDateEnd}"/>
+                    <DatePicker x:Name="DTPDateEnd" Width="175" Margin="5"/>
+                </StackPanel>
+                <StackPanel Orientation="Horizontal" >
+                    <TextBlock Width="110" Style="{StaticResource TBlockAdd}" Text="{x:Static props:Resources.DescriptionTB}"/>
+                    <TextBox x:Name="TBDescription" Height="40" Width="175"/>
+                </StackPanel>
+            </StackPanel>
+            <StackPanel>
+                <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="175" Margin="5" Height="27" Content="{x:Static props:Resources.Add}" x:Name="BTNAdd" Click="BTNAdd_Click"/>
+                <Button HorizontalAlignment="Center" VerticalAlignment="Center" Width="175" Margin="5" Height="27" Content="{x:Static props:Resources.Cancel}" x:Name="BTNNo"  Click="BTNNo_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>

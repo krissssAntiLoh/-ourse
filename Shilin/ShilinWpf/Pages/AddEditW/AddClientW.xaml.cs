@@ -11,9 +11,9 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using ShilinWpf.Entities;
+using NorbitWpf.Entities;
 
-namespace ShilinWpf.Pages.AddEdit
+namespace NorbitWpf.Pages.AddEdit
 {
     /// <summary>
     /// Логика взаимодействия для AddClientW.xaml

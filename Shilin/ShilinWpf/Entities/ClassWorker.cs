@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ShilinWpf.Entities
+namespace NorbitWpf.Entities
 {
     public partial class Worker 
     {

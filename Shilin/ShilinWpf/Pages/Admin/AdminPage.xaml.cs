@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ShilinWpf.Pages.Admin
+namespace NorbitWpf.Pages.Admin
 {
     /// <summary>
     /// Логика взаимодействия для AdminPage.xaml

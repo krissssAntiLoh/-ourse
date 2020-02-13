@@ -14,7 +14,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace ShilinWpf.Pages
+namespace NorbitWpf.Pages
 {
     /// <summary>
     /// Логика взаимодействия для AuthorizationPage.xaml
