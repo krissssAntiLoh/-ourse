@@ -76,9 +76,42 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="AppData.cs" />
+    <Compile Include="Entities\Assets.cs">
+      <DependentUpon>ModelNorbit.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\ClassWorker.cs" />
+    <Compile Include="Entities\Client.cs">
+      <DependentUpon>ModelNorbit.tt</DependentUpon>
+    </Compile>
     <Compile Include="Entities\Function.cs">
-      <DependentUpon>ModelShilinSupport.tt</DependentUpon>
+      <DependentUpon>ModelNorbit.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ModelNorbit.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelNorbit.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ModelNorbit.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelNorbit.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\ModelNorbit.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ModelNorbit.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Project.cs">
+      <DependentUpon>ModelNorbit.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\sysdiagrams.cs">
+      <DependentUpon>ModelNorbit.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\TypeService.cs">
+      <DependentUpon>ModelNorbit.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Entities\Worker.cs">
+      <DependentUpon>ModelNorbit.tt</DependentUpon>
     </Compile>
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -130,41 +163,8 @@
     <Compile Include="Pages\Admin\AdminPage.xaml.cs">
       <DependentUpon>AdminPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Entities\Assets.cs">
-      <DependentUpon>ModelShilinSupport.tt</DependentUpon>
-    </Compile>
     <Compile Include="Pages\AuthorizationPage.xaml.cs">
       <DependentUpon>AuthorizationPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\Client.cs">
-      <DependentUpon>ModelShilinSupport.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\ModelShilinSupport.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelShilinSupport.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\ModelShilinSupport.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelShilinSupport.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\ModelShilinSupport.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>ModelShilinSupport.edmx</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\Project.cs">
-      <DependentUpon>ModelShilinSupport.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\sysdiagrams.cs">
-      <DependentUpon>ModelShilinSupport.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\TypeService.cs">
-      <DependentUpon>ModelShilinSupport.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Entities\Worker.cs">
-      <DependentUpon>ModelShilinSupport.tt</DependentUpon>
     </Compile>
     <Compile Include="Pages\NavigateP\ProjectP.xaml.cs">
       <DependentUpon>ProjectP.xaml</DependentUpon>
@@ -201,14 +201,14 @@
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.ru-Ru.Designer.cs</LastGenOutput>
     </EmbeddedResource>
-    <EntityDeploy Include="Entities\ModelShilinSupport.edmx">
+    <EntityDeploy Include="Entities\ModelNorbit.edmx">
       <Generator>EntityModelCodeGenerator</Generator>
-      <LastGenOutput>ModelShilinSupport.Designer.cs</LastGenOutput>
+      <LastGenOutput>ModelNorbit.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="packages.config" />
-    <None Include="Entities\ModelShilinSupport.edmx.diagram">
-      <DependentUpon>ModelShilinSupport.edmx</DependentUpon>
+    <None Include="Entities\ModelNorbit.edmx.diagram">
+      <DependentUpon>ModelNorbit.edmx</DependentUpon>
     </None>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -218,24 +218,22 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="assets\3213412.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="assets\Andrey.png" />
-    <Content Include="Entities\ModelShilinSupport.Context.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>ModelShilinSupport.Context.cs</LastGenOutput>
-      <DependentUpon>ModelShilinSupport.edmx</DependentUpon>
-    </Content>
-    <Content Include="Entities\ModelShilinSupport.tt">
-      <Generator>TextTemplatingFileGenerator</Generator>
-      <DependentUpon>ModelShilinSupport.edmx</DependentUpon>
-      <LastGenOutput>ModelShilinSupport.cs</LastGenOutput>
-    </Content>
+    <Resource Include="assets\1.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Entities\ModelNorbit.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelNorbit.edmx</DependentUpon>
+      <LastGenOutput>ModelNorbit.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="Entities\ModelNorbit.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ModelNorbit.edmx</DependentUpon>
+      <LastGenOutput>ModelNorbit.cs</LastGenOutput>
+    </Content>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -38,11 +38,10 @@ namespace ShilinWpf.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=ShilinSupport;Persist Security Info=True;User ID=sa" +
-            "")]
-        public string ShilinSupportConnectionString {
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=.;Initial Catalog=Norbit;Persist Security Info=True;User ID=sa")]
+        public string NorbitConnectionString {
             get {
-                return ((string)(this["ShilinSupportConnectionString"]));
+                return ((string)(this["NorbitConnectionString"]));
             }
         }
     }

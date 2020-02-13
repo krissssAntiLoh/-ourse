@@ -13,10 +13,10 @@ namespace ShilinWpf.Entities
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class ShilinSupportEntities : DbContext
+    public partial class NorbitEntities : DbContext
     {
-        public ShilinSupportEntities()
-            : base("name=ShilinSupportEntities")
+        public NorbitEntities()
+            : base("name=NorbitEntities")
         {
         }
     

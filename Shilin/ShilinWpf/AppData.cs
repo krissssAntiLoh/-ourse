@@ -11,6 +11,6 @@ namespace ShilinWpf
     {
         public static Frame MainFrame;
 
-        public static Entities.ShilinSupportEntities Context = new Entities.ShilinSupportEntities();
+        public static Entities.NorbitEntities Context = new Entities.NorbitEntities();
     }
 }
